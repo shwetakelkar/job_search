@@ -1,6 +1,6 @@
 .card{
     min-height: 300px !important ;
-    margin-left:12%;
+    
   }
 
 body{
@@ -16,6 +16,9 @@ body{
 #job-category-input,#location-input{
     max-width:440px;
     color :white;
+}
+.card-image{
+    margin-left:12%;
 }
 .parallax{
     background: url("../images/jobSearch1.jpg");
