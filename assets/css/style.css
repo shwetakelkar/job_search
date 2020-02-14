@@ -17,8 +17,8 @@ body{
     max-width:440px;
     color :white;
 }
-.card-image{
-    margin-left:12%;
+.col-info{
+    margin-left: 12% !important;
 }
 .parallax{
     background: url("../images/jobSearch1.jpg");
