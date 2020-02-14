@@ -1,0 +1,108 @@
+.card{
+    min-height: 300px !important ;
+    
+  }
+
+body{
+    background: rgb(238, 250, 250);
+}
+
+.btn,#headerLogo h5,.btn-floating{
+    color: rgb(121, 242, 242);
+}
+.card-title{
+    text-align: center;
+}
+#job-category-input,#location-input{
+    max-width:440px;
+    color :white;
+}
+.parallax{
+    background: url("../images/jobSearch1.jpg");
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    filter: brightness(60%);  
+}
+.parallax-container{
+    height:400px !important;
+}
+.icon,input::placeholder>#banner{
+    opacity: 0.2;
+}
+.icon,input::placeholder{
+    color: white ;
+    /* color: rgb(32, 243, 243); */
+    
+}
+.input-field input[type=text]{
+     border-bottom:1px solid white!important; 
+    
+}
+
+footer{
+    margin-top: 60px;
+}
+.collection-item{
+    
+    text-decoration-line: underline ;
+    
+    
+}
+footer,.btn{
+    background:  rgb(93,93,93) !important;
+
+}
+.collection-item{
+    color: rgb(93,93,93) ;
+}
+
+.collapsible-body{
+    padding: 0 !important;
+}
+.dropdown-content{
+    width:150px !important
+}
+.search-item{
+    font-size: 20px;
+    text-decoration-line: underline ;
+    color: rgb(93,93,93)
+
+}
+.search-card{
+    padding: 20px;
+    margin: 0;
+}
+span{
+    text-decoration: none ;
+    display: inline-block;
+}
+#new-search-id{
+    min-height: 300px;
+    background:white ;
+    margin-top:30px;
+    
+}
+#new-search-id h5{
+ padding:20px
+}
+h5{
+    color: rgb(93,93,93);   
+}
+
+@media screen and (min-width: 601px){
+    .hide-on-med-and-up {
+    display: none !important;
+    visibility: hidden !important
+    }
+}
+@media screen and (max-width: 601px){
+    .icon{
+    display: none !important;
+    
+
+    }
+    .input-field input[type=text]{
+        margin-left: 20px;
+    }
+    
+}
