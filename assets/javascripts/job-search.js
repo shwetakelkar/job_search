@@ -41,20 +41,18 @@ $(document).ready(function() {
     
     $(".btn-signup").on("click",function(e){
         e.preventDefault();
-        console.log("i am clicked");
         var inputText = $("#signupuserName").val();
         var inputpassword = $("#signupPassWord").val();
-        console.log(inputText);
-       firebase.database().ref('/user/'+ inputText).set({
+        firebase.database().ref('/user/'+ inputText).set({
         pwd:inputpassword
         });    
     });
 
     $(".btn-login").on("click",function(e){
 
-        var inputloginText = $("#userName").val();
-        console.log("i ma in login");
         e.preventDefault();
+        var inputloginText = $("#userName").val();
+        
         
     });
    
@@ -187,7 +185,6 @@ $(".btn-src").on("click",function(e){
                 else if(btnValue==="Adzuna"){
 
                     var data =response.results;
-                    console.log(data)
                     if(data.length>0){
                         for(var i=0; i<data.length;i++){
                             var title=response.results[i].title.replace(/[</>]/g,"").replace(/strong/g,"")
@@ -232,7 +229,6 @@ $(".btn-src").on("click",function(e){
 $("#serch-box").on("click",'a',function(e){
     
     var val = $(this).text();
-    console.log(val);
     var str = val.replace(/\d+/g,"");
     
     for (var i = 0; i < listArr.length; i++) {
@@ -255,7 +251,6 @@ $('.scrollspy').scrollSpy();
 });
 database.ref("/search/").orderByChild("dateAdded").limitToLast(5).on("child_added",function(snapshot){
 
-    console.log(snapshot.val());
     if(snapshot.val()){
        
         var keys = Object.keys(snapshot.val());
@@ -271,7 +266,6 @@ database.ref("/search/").orderByChild("dateAdded").limitToLast(5).on("child_adde
         var obj ={};
         obj[key]=temp;
         var keysOfArray=[];
-        console.log(listArr);
         if(listArr.length>0){
             
             for (var i=0;i<listArr.length;i++){
@@ -299,17 +293,14 @@ database.ref("/search/").orderByChild("dateAdded").limitToLast(5).on("child_adde
                 }  
             }
             else{
-                console.log("Nothing changes");
                 var index= keysOfArray.indexOf(key);
                 console.log(index)
                 listArr.splice(index,1);
                 listArr.push(obj);
-                console.log(listArr);
                 $("#serch-box").empty();
                 for(var j=0;j<listArr.length;j++){
                     
                     var temVar = Object.keys(listArr[j]);
-                    console.log(temVar[0]);
                     var spanLink = $("<span class='new badge' data-badge-caption='results'>");
                     spanLink.text(temp.length);
                     var jobLink = $("<a href=#>").attr("class","collection-item").text(temVar[0])
